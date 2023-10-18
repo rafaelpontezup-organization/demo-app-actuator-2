@@ -1,0 +1,30 @@
+server:
+    port: 8080
+    servlet:
+        context-path: /
+    error:
+        include-message: always
+        include-binding-errors: always
+        include-stacktrace: on_param
+        include-exception: false
+spring:
+    application:
+        name: ingressos
+    output:
+        ansi:
+            enabled: ALWAYS
+management:
+    endpoints:
+        jmx:
+            exposure:
+                include: '*'
+        web:
+            exposure:
+                include: health,metrics
+    endpoint:
+        health:
+            show-details: always
+            show-components: always
+            probes:
+                enabled: true
+                add-additional-paths: true
