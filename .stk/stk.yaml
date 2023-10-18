@@ -1,0 +1,47 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: demo-app-actuator-2
+  description: demo-app-actuator-2
+  starter: popcorn-studio/spring-boot-rest-api-stack@1.2.0/rest-api-base
+  stack-version-id: 01HD2DSQJXF8SD8RBTZTPBR72G
+  stack: spring-boot-rest-api-stack@1.2.0
+spec:
+  type: app
+  app-id: 01HD2EF3E6W4PT87YC0TBFRWWC
+  plugins:
+    - name: popcorn-studio/spring-boot-rest-api-stack@1.2.0/popcorn-springboot-base-plugin@0.0.1
+      alias: popcorn-springboot-base-plugin-1697668082991
+      plugin-version-id: 01HD2652BGPQFFFCSWWB1B02EM
+      stack-version-id: 01HD2DSQJXF8SD8RBTZTPBR72G
+      type: app
+      inputs:
+        project_name: demo-app-actuator-2
+        project_group_id: br.com.zup.cinema
+        project_artifact_id: ingressos
+        project_springboot_version: 3.1.4
+        project_java_version: '17'
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: popcorn-studio/spring-boot-rest-api-stack@1.2.0/popcorn-springboot-actuator-plugin@0.0.2
+      alias: popcorn-springboot-actuator-plugin-1697668083004
+      plugin-version-id: 01HD2DRHD7T91MA40N5RNGH0XW
+      stack-version-id: 01HD2DSQJXF8SD8RBTZTPBR72G
+      type: app
+      inputs:
+        actuator_endpoints:
+          - health
+          - metrics
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
+  repository: https://github.com/rafaelpontezup-organization/demo-app-actuator-2.git
