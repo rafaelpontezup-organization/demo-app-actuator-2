@@ -8,6 +8,7 @@ metadata:
   stack: spring-boot-rest-api-stack@1.2.0
 spec:
   type: app
+  app-id: 01HD2EF3E6W4PT87YC0TBFRWWC
   plugins:
     - name: popcorn-studio/spring-boot-rest-api-stack@1.2.0/popcorn-springboot-base-plugin@0.0.1
       alias: popcorn-springboot-base-plugin-1697668082991
